@@ -159,3 +159,20 @@ body {
 .card-img-top {
   border-bottom: 1px solid #ddd;
 }
+
+.btn-quote-custom {
+  background-color: #0056b3;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-quote-custom:hover {
+  background-color: #004494;
+  color: #d4af37;
+  box-shadow: 0 4px 15px  rgba(212, 175, 55, 0.4) !important;
+  border-color: #f9f295 !important;
+}
