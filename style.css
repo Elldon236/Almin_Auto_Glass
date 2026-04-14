@@ -12,6 +12,8 @@ body {
 }
 
 .hero-section img {
+  filter: brightness(1.1) contrast(1.1) saturate(1.3);
+  transition: filter 0.3s ease; /* Smooth transition for filter effects */
   display: block;
   width: 100%;
   height: auto;
