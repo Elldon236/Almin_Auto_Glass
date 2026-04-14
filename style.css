@@ -1,0 +1,159 @@
+body {
+  background-color: #e1f5fe;
+}
+
+.hero-section {
+  width: 100%;
+  background-color: #ffffff;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-section img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 630px;
+}
+
+@media (max-width: 600px) {
+  .hero-section {
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.navbar {
+  background-color: #1279e0 !important;
+  padding: 1rem 2rem;
+  border-bottom: 6px solid #d4af37;
+}
+
+.navbar-brand {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link {
+  position: relative;
+  color: #ffffff !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #00f2ff;
+  left: 0;
+  bottom: 0;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link:hover {
+  color: #00f2ff !important;
+  text-shadow: 0px 0px 8px rgba(0, 242, 255, 0.6);
+}
+
+.navbar-toggler {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #d4af37 !important;
+  padding: 4px 10px;
+  transition: all 0.5s ease;
+  background-color: transparent !important;
+  box-shadow: 0px 0px 10px rgba(212, 175, 55, 0.6) !important;
+}
+
+.navbar-toggler-icon {
+  filter: invert(72%) sepia(54%) saturate(450%) hue-rotate(5deg) brightness(95%)
+    contrast(89%) !important;
+}
+
+.container {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  padding: 60px 20px !important;
+}
+
+.flag-logo {
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 250px;
+  height: auto;
+  background-color: #1a1a1a;
+  padding: 8px;
+  background: linear-gradient(
+    45deg,
+    #d4af3e,
+    #f9f295,
+    #ab8e28,
+    #f9f295,
+    #d4af37
+  );
+  border-radius: 4px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  animation: wave 6s ease-in-out infinite !important;
+  transform-origin: left center;
+  perspective: 2000px;
+}
+/* perspective adds depth to the 3D effect */
+
+/* This sets the wave animation for the flag logo */
+@keyframes wave {
+  0% {
+    transform: rotate(0deg) rotateY(0deg) skew(0deg);
+  }
+  25% {
+    transform: rotate(1deg) rotateY(15deg) skew(2deg); /* swings to you*/
+  }
+  50% {
+    transform: rotate(-1deg) rotateY(-10deg) skew(-1deg); /* swings away */
+  }
+  75% {
+    transform: rotate(0.5deg) rotateY(5deg) skew(0.5deg); /* swings back to you */
+  }
+  100% {
+    transform: rotate(0deg) rotateY(0deg) skew(0deg);
+  }
+}
+
+.card {
+  border-top: 5px solid #d4af37 !important;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card-title {
+  color: #003366;
+  font-weight: bold;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.card-img-top {
+  border-bottom: 1px solid #ddd;
+}
