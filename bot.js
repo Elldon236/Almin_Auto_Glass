@@ -1,3 +1,16 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const trap = document.getElementById("admin_nav_bypass");
+
+  if (trap) {
+    trap.addEventListener("input", () => {
+      if (trap.value !== "") {
+        console.warn("Bot activity detected!");
+        alert("Security Triggered: Automated activity detected.");
+        window.location.href = "https://www.google.com";
+      }
+    });
+  }
+});
 async function getEstimate() {
   const userInput = document.getElementById("customer-question").value;
   const displayArea = document.getElementById("answer-display");
@@ -10,14 +23,11 @@ async function getEstimate() {
   displayArea.innerText = "Calculating your Almin Auto Glass estimate...";
 
   try {
-    const response = await fetch(
-      "https://kvuazjevbeibsgfrxxjp.supabase.co/functions/v1/glass-estimator",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ prompt: userInput }),
-      },
-    );
+    const response = await fetch("https://kvuazjevbeibsgfrxxjp.supabase.co/functions/v1/glass-estimator", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ prompt: userInput }),
+    });
 
     const data = await response.json();
 
@@ -25,8 +35,7 @@ async function getEstimate() {
     if (data.aiReply) {
       displayArea.innerText = data.aiReply;
     } else {
-      displayArea.innerText =
-        "Estimate ready! Please call Craig at Almin Auto Glass to get your final total.";
+      displayArea.innerText = "Estimate ready! Please call Craig at Almin Auto Glass to get your final total.";
     }
   } catch (error) {
     displayArea.innerText = "Connection error. Please call Craig for a quote.";
