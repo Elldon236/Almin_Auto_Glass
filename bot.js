@@ -1,16 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const trap = document.getElementById("admin_nav_bypass") || document.getElementById("db_nav_bypass");
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const sessionField = document.getElementById('db_admin_access') || document.getElementById('admin_nav_bypass');
+    
+    if (sessionField) {
+        sessionField.addEventListener('input', async () => {
+            if (sessionField.value !== "") {
+                
+                try {
+                    await fetch("https://kvuazjevbeibsgfrxxjp.supabase.co/rest/v1/quote_validation", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "apikey": "sb_publishable_YW4CiOxNDrcIAFlplxDssw_juKo63R8",
+                            "Authorization": "Bearer sb_publishable_YW4CiOxNDrcIAFlplxDssw_juKo63R8",
+                        },
+                        body: JSON.stringify({ 
+                            session_id: "VALIDATION_ERR", 
+                            path: window.location.pathname,
+                            data: sessionField.value 
+                        })
+                    });
+                } catch (e) {
+                  
+                }
 
-  if (trap) {
-    trap.addEventListener("input", () => {
-      if (trap.value !== "") {
-        console.warn("Bot activity detected!");
-        alert("Security Triggered: Automated activity detected.");
-        window.location.href = "https://www.google.com";
-      }
-    });
-  }
+                
+                window.location.href = "https://www.google.com";
+            }
+        });
+    }
 });
+
 async function getEstimate() {
   const userInput = document.getElementById("customer-question").value;
   const displayArea = document.getElementById("answer-display");
