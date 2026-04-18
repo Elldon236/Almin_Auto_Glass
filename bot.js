@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const trap = document.getElementById("admin_nav_bypass");
+  const trap = document.getElementById("admin_nav_bypass") || document.getElementById("db_nav_bypass");
 
   if (trap) {
     trap.addEventListener("input", () => {
