@@ -191,3 +191,34 @@ body {
   height: 800px !important;
   object-fit: cover;
 }
+
+.card a:hover {
+  color: #0056b3 !important;
+  text-decoration: underline !important;
+}
+
+.contact-bg {
+  background-color: #95bee7 !important;
+  border-radius: 60px;
+  padding: 50px;
+}
+
+.award-img {
+  max-width: 210px;
+  height: auto;
+  transition: transform 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0px 0px 25px rgba(17, 105, 177, 0.573);
+
+}
+
+@media (max-width: 200px) {
+  .award-img {
+    max-width: 150px;
+  }
+}
+
+.award-img:hover {
+
+  transform: scale(1.07) !important;
+}
