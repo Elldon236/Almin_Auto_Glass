@@ -83,8 +83,7 @@ body {
 }
 
 .navbar-toggler-icon {
-  filter: invert(72%) sepia(54%) saturate(450%) hue-rotate(5deg) brightness(95%)
-    contrast(89%) !important;
+  filter: invert(72%) sepia(54%) saturate(450%) hue-rotate(5deg) brightness(95%) contrast(89%) !important;
 }
 
 .container {
@@ -102,14 +101,7 @@ body {
   height: auto;
   background-color: #1a1a1a;
   padding: 8px;
-  background: linear-gradient(
-    45deg,
-    #d4af3e,
-    #f9f295,
-    #ab8e28,
-    #f9f295,
-    #d4af37
-  );
+  background: linear-gradient(45deg, #d4af3e, #f9f295, #ab8e28, #f9f295, #d4af37);
   border-radius: 4px;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
   animation: wave 6s ease-in-out infinite !important;
@@ -173,12 +165,12 @@ body {
 .btn-quote-custom:hover {
   background-color: #004494;
   color: #d4af37;
-  box-shadow: 0 4px 15px  rgba(212, 175, 55, 0.4) !important;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4) !important;
   border-color: #f9f295 !important;
 }
 
 @media (max-width: 767px) {
-  .carousel-caption h3{
+  .carousel-caption h3 {
     font-size: 1.1rem !important;
   }
   .carousel-caption p {
@@ -209,7 +201,6 @@ body {
   transition: transform 0.3s ease;
   border-radius: 20px;
   box-shadow: 0px 0px 25px rgba(17, 105, 177, 0.573);
-
 }
 
 @media (max-width: 200px) {
@@ -219,6 +210,12 @@ body {
 }
 
 .award-img:hover {
-
   transform: scale(1.07) !important;
+}
+
+footer {
+  width: 100%;
+  display: block;
+  height: fit-content !important;
+
 }
