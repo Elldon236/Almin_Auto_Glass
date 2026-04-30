@@ -207,23 +207,25 @@ body {
     top: 0 !important; /* Ensure navbar stays at the top on smaller screens */
   }
 
-  .quote-form {
+  .input-group {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     width: 100% !important; /* Make button full width on smaller screens */
-    
+    gap: 15px !important; /* Add space between form elements */
   }
 
-  .quote-form input {
+  .custom-input {
     width: 100% !important; /* Make inputs full width on smaller screens */
+    flex: 1 1 auto !important; /* Allow inputs to grow and shrink as needed */
     order: 1 !important; /* Ensure inputs are stacked vertically */
     margin-bottom: 10px !important; /* Add space between inputs and button */
 
   }
 
-  .get-quote-btn {
+  .btn-quote-custom {
     width: 100% !important; /* Make button full width on smaller screens */
+    display: block !important; /* Ensure button is displayed as a block element */
     order: 2 !important; /* Ensure button is below inputs */
 
   }
@@ -273,21 +275,26 @@ footer {
 
 }
 
-.quote-container-class {
-  padding: 20px; /* Add padding for better spacing */
-  text-align: center; /* Center the text */
+.input-group {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 15px !important; /* Add space between form elements */
 
 }
 
-.quote-form {
-  display: flex; 
-  flex-direction: column;
-  gap: 10px; /* Add space between form elements */
+.custom-input {
+  width: 100% !important; /* Make inputs full width */
+  max-width: 400% !important; /* Limit maximum width for better readability */
+  border-radius: 5px !important;
+
 }
 
-input[type="text"], .get-quote-btn {
-  width: 100%; /* Make inputs and button full width */
-  margin: 0 auto; /* Center the form */
+.btn-quote-custom {
+  width: 100% !important; /* Make button full width */
+  min-width: 100px !important; /* Ensure button has a minimum width */
+  margin-left: 0 !important; /* Remove left margin for better alignment */
+  margin-top: 10px !important; /* Add top margin for better spacing on smaller screens */
+  display: block !important; /* Ensure button is displayed as a block element */
 
 }
 
