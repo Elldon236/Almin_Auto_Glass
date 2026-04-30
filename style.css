@@ -206,7 +206,24 @@ body {
     padding-top: 0 !important; /* Remove top padding for better fit on smaller screens */
     top: 0 !important; /* Ensure navbar stays at the top on smaller screens */
   }
+
+  .quote-form {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .quote-form input {
+    order: 1 !important; /* Ensure inputs are stacked vertically */
+
+  }
+
+  .get-quote-btn {
+    order: 2 !important; /* Ensure button is below inputs */
+
+  }
 }
+
+
 
 .carousel-item img {
   width: 100%;
@@ -250,7 +267,7 @@ footer {
 
 }
 
-.quote-container {
+.quote-container-class {
   padding: 20px; /* Add padding for better spacing */
   text-align: center; /* Center the text */
 
