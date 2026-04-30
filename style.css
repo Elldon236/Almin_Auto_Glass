@@ -210,14 +210,20 @@ body {
   .quote-form {
     display: flex !important;
     flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important; /* Make button full width on smaller screens */
+    
   }
 
   .quote-form input {
+    width: 100% !important; /* Make inputs full width on smaller screens */
     order: 1 !important; /* Ensure inputs are stacked vertically */
+    margin-bottom: 10px !important; /* Add space between inputs and button */
 
   }
 
   .get-quote-btn {
+    width: 100% !important; /* Make button full width on smaller screens */
     order: 2 !important; /* Ensure button is below inputs */
 
   }
