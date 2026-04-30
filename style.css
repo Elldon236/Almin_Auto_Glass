@@ -17,6 +17,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  line-height: 0; /* Remove extra space below the image */
 }
 
 .hero-section img {
@@ -27,11 +28,12 @@ body {
   height: auto;
   max-height: 630px; 
   margin-bottom: 0; /* Remove bottom margin */
+
 }
 
 @media (max-width: 600px) {
   .hero-section {
-    height: 350px;
+    height: auto; /* Allow height to adjust based on content */
     object-fit: cover;
     object-position: center;
   }
@@ -39,9 +41,16 @@ body {
 
 .navbar {
   background-color: #1279e0 !important;
-  padding: 1rem 2rem;
+  padding-top: 0 !important; /* Remove top padding */
   border-bottom: 6px solid #d4af37;
   margin-top: 0; /* Remove default margin */
+  margin-bottom: 0; /* Remove default margin */
+  position: relative;
+  white-space: normal !important; /* Allow wrapping of nav items */
+  font-size: 1.2rem !important; /*shrink font size for better fit on smaller screens */
+  max-width: 100% !important; /* Limit navbar width to 100% of the viewport */
+  display: flex !important; /* Allow navbar to shrink to fit content */
+
 }
 
 .navbar-brand {
@@ -180,11 +189,22 @@ body {
 }
 
 @media (max-width: 767px) {
+
+  .hero-section, .carousel, .carousel-inner {
+    margin-bottom: 0 !important; /* Remove bottom margin for better fit on smaller screens */
+    padding-bottom: 0 !important; /* Remove bottom padding for better fit on smaller screens */
+  }
   .carousel-caption h3 {
     font-size: 1.1rem !important;
   }
   .carousel-caption p {
     font-size: 0.8rem !important;
+  }
+
+  .navbar {
+    margin-top: 0 !important; /* Remove top margin for better fit on smaller screens */
+    padding-top: 0 !important; /* Remove top padding for better fit on smaller screens */
+    top: 0 !important; /* Ensure navbar stays at the top on smaller screens */
   }
 }
 
