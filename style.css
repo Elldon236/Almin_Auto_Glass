@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 body {
   background-color: #e1f5fe;
   overflow-x: hidden; /* Prevent horizontal scrolling */
@@ -26,9 +25,8 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 630px; 
+  max-height: 630px;
   margin-bottom: 0; /* Remove bottom margin */
-
 }
 
 @media (max-width: 600px) {
@@ -50,7 +48,6 @@ body {
   font-size: 1.2rem !important; /*shrink font size for better fit on smaller screens */
   max-width: 100% !important; /* Limit navbar width to 100% of the viewport */
   display: flex !important; /* Allow navbar to shrink to fit content */
-
 }
 
 .navbar-brand {
@@ -102,7 +99,7 @@ body {
 }
 
 .navbar-toggler-icon {
-  filter: invert(72%) sepia(54%) saturate(450%) hue-rotate(5deg) brightness(95%) contrast(89%) !important;
+  filter: brightness(0) invert(1) !important; /* Invert colors to make the icon visible on dark background */
 }
 
 .container {
@@ -189,8 +186,9 @@ body {
 }
 
 @media (max-width: 767px) {
-
-  .hero-section, .carousel, .carousel-inner {
+  .hero-section,
+  .carousel,
+  .carousel-inner {
     margin-bottom: 0 !important; /* Remove bottom margin for better fit on smaller screens */
     padding-bottom: 0 !important; /* Remove bottom padding for better fit on smaller screens */
   }
@@ -220,18 +218,14 @@ body {
     flex: 1 1 auto !important; /* Allow inputs to grow and shrink as needed */
     order: 1 !important; /* Ensure inputs are stacked vertically */
     margin-bottom: 10px !important; /* Add space between inputs and button */
-
   }
 
   .btn-quote-custom {
     width: 100% !important; /* Make button full width on smaller screens */
     display: block !important; /* Ensure button is displayed as a block element */
     order: 2 !important; /* Ensure button is below inputs */
-
   }
 }
-
-
 
 .carousel-item img {
   width: 100%;
@@ -272,21 +266,18 @@ footer {
   width: 100%;
   display: block;
   height: fit-content !important;
-
 }
 
 .input-group {
   display: flex !important;
   justify-content: center !important;
   gap: 15px !important; /* Add space between form elements */
-
 }
 
 .custom-input {
   width: 100% !important; /* Make inputs full width */
   max-width: 400% !important; /* Limit maximum width for better readability */
   border-radius: 5px !important;
-
 }
 
 .btn-quote-custom {
@@ -295,7 +286,6 @@ footer {
   margin-left: 0 !important; /* Remove left margin for better alignment */
   margin-top: 10px !important; /* Add top margin for better spacing on smaller screens */
   display: block !important; /* Ensure button is displayed as a block element */
-
 }
 
 .contact-hero-img {
@@ -306,12 +296,29 @@ footer {
   display: block !important;
   margin: 0 auto !important;
   border-radius: 15% !important;
-
 }
 
+.custom-menu-btn {
+  border: 2px solid #ffd700 !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  padding: 5px 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  transition: all 0.3s ease !important;
+}
 
+.menu-text {
+  color: #ffd700 !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  font-size: 0.9rem !important;
+  letter-spacing: 1px !important;
+  margin-left: 5px !important; /* Add space between icon and text */
+}
 
-
-
-
-
+.custom-menu-btn:active,
+.custom-menu-btn:focus {
+  background-color: #ffd700 !important;
+  box-shadow: 0px 0px 10px 0 0 15px rgba(255, 215, 0, 0.5) !important;
+  color: #000 !important;
+}
