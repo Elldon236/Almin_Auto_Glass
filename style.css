@@ -298,6 +298,19 @@ footer {
 
 }
 
+.contact-hero-img {
+  width: 100%;
+  max-width: 600% !important; /* Limit maximum width for better fit on larger screens */
+  height: auto !important; /* Limit maximum height for better fit on smaller screens */
+  object-fit: contain !important;
+  display: block !important;
+  margin: 0 auto !important;
+  border-radius: 15% !important;
+
+}
+
+
+
 
 
 
