@@ -322,3 +322,19 @@ footer {
   box-shadow: 0px 0px 10px 0 0 15px rgba(255, 215, 0, 0.5) !important;
   color: #000 !important;
 }
+
+.truck-office {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 10px !important;
+  display: block !important;
+}
+
+.dogs-img {
+  width: 100% !important;
+  height: auto !important;
+  border-radius: 10px !important;
+  display: block !important;
+}
+
+
